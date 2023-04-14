@@ -81,7 +81,7 @@ public class Services implements IServices {
         return eventRepo.findByDateEvent(new Date());
     }
 
-    @Scheduled(fixedRate = 40000)
+    @Scheduled(fixedRate = 30000)
     public void afficher(){
         log.info("********* Evenements d'aujourd'hui *********");
         for (Evenement e:getEventsOfToday()) {
